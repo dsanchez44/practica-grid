@@ -1,0 +1,194 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Rubik', sans-serif;
+}
+body {
+  margin: 20px;
+}
+:root {
+  --primary-color: rgb(236, 236, 236);
+  --secondary-color: rgb(21, 21, 21);
+  --blue-color: #2bc5cd;
+  --orange-color: #ff693d;
+  --border: 2px solid var(--blue-color);
+  --spacing: 28px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.grid-container {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(9, 155px);
+  grid-template-rows: repeat(6, 155px);
+  gap: var(--spacing);
+  object-fit: center;
+}
+img {
+  width: 100%;
+  height: 100%;
+}
+.school {
+  grid-row: 1 / 3;
+  grid-column: 4 / 7;
+  width: 100%;
+  height: 100%;
+}
+.student {
+  grid-row: 1 / 3;
+  grid-column: 7 / 10;
+  height: 100%;
+  width: 100%;
+}
+.time {
+  grid-row: 3 / 5;
+  grid-column: 7 / 10;
+  height: 100%;
+  width: 100%;
+}
+.alumni {
+  grid-row: 5 / 7;
+  grid-column: 1 / 4;
+  height: 100%;
+  width: 100%;
+}
+.lorem {
+  grid-row: 5 / 7;
+  grid-column: 4 / 10;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  background-color: var(--orange-color);
+  color: var(--primary-color);
+  padding: 20px;
+}
+.lorem > p {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.lorem > button {
+  padding: 20px 50px 20px 50px;
+  font-weight: bolder;
+  cursor: pointer;
+}
+.training {
+  grid-row: 1 / 5;
+  grid-column: 1 / 4;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  background-color: var(--blue-color);
+  color: var(--primary-color);
+}
+.training > h1 {
+  text-align: center;
+  padding-top: 20px;
+  font-size: 27px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.training > p {
+  text-align: center;
+  align-items: start;
+  padding-top: 54%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.education {
+  grid-row: 3 / 5;
+  grid-column: 4 / 7;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  align-content: center;
+  object-fit: cover;
+  object-position: center;
+  background-color: var(--primary-color);
+  color: var(--blue-color);
+  border: var(--border);
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 23px;
+}
+@media screen and (max-width: 500px) {
+  .grid-container {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    gap: var(--spacing);
+    object-fit: center;
+    padding: 20px;
+  }
+  img {
+    width: 100%;
+    height: 100%;
+  }
+  .school {
+    grid-row: 3 / 4;
+    grid-column: 1 / 2;
+    width: 100%;
+    height: 100%;
+  }
+  .student {
+    grid-row: 4 / 5;
+    grid-column: 1 / 2;
+    height: 100%;
+    width: 100%;
+  }
+  .time {
+    grid-row: 6 / 7;
+    grid-column: 1 / 2;
+    height: 100%;
+    width: 100%;
+  }
+  .alumni {
+    grid-row: 7 / 8;
+    grid-column: 1 / 2;
+    height: 100%;
+    width: 100%;
+  }
+  .lorem {
+    grid-row: 8 / 9;
+    grid-column: 1 / 2;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    background-color: var(--orange-color);
+    color: var(--primary-color);
+    padding: 20px;
+  }
+  .education {
+    grid-row: 5 / 6;
+    grid-column: 1 / 2;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    align-content: center;
+    object-fit: cover;
+    object-position: center;
+    background-color: var(--primary-color);
+    color: var(--blue-color);
+    border: var(--border);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 23px;
+  }
+  .training {
+    grid-row: 1 / 3;
+    grid-column: 1 / 2;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    background-color: var(--blue-color);
+    color: var(--primary-color);
+  }
+  .training > p {
+    padding-top: 75%;
+  }
+}
